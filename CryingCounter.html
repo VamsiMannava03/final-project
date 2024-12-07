@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title> Vamsi Mannava Portoflio About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <a href = "homepage.html">Hompeage</a>
+        <a href = "about.html">About Me</a>
+        <a href = "contact.html">Contact Me</a>
+        <a href = "projects.html">Projects</a>
+        <a href = "skills.html">Skills</a>
+    </nav>
+    <h1>Crying Counter</h1>
+    <img src="crying.jpg">
+    <p> The Crying Counter is a discord bot developed with Python. It keeps track of how many times a user says "I'm crying" and accounts for similar variations 
+        such as I am crying and typos by using the Levenstein Distance Algorithm. If the message is close to the original within a certain threshold then 
+        the user's count increments The counter for each user is tracked by using a diciontary. The discord username 
+    is the key and the value is the number of times they say a message that registers within being above a certain similiarity threshold then the user's count increments. 
+    An Sqlite3 file stores all the user information in the event that the bot crashes to ensure data isn't lost. User's can check their personal and other user's counter by using the !print_count @username 
+    command to check. Originally to account for more variations of the message, GPT API was integrated but this version of the bot wasn't feasible to implement as hundreds of messages are sent in the server 
+    everday and making a call to gpt quickly got expensive. </p>
+
+</body>
