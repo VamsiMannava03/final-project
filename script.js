@@ -3,7 +3,7 @@ emailjs.init('lseBindrlzcz4y5Kz'); // Use your public key here
 
 // Add an event listener to handle form submission
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); 
 
     // Use EmailJS to send the form data
     emailjs.sendForm('service_c3jojtr', 'template_8z6whgo', this)

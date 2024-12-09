@@ -3,7 +3,7 @@
 <head>
     <title>Vamsi Mannava Portfolio - Crying Counter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <nav>
@@ -22,11 +22,15 @@
         the user's count increments. The counter for each user is tracked by using a dictionary. The Discord username 
         is the key, and the value is the number of times they say a message that registers above a certain similarity threshold. 
         An SQLite3 file stores all the user information in the event that the bot crashes to ensure data isn't lost. Users can check their personal and other users' counters by using the 
-        <code>!print_count @username</code> command.
+        !print_count @username command.Originally, to account for more variations of the message, GPT API was integrated, but this version of the bot wasn't feasible to implement as hundreds of messages are sent in the server 
+        every day. Each message would trigger a request to GPT which would then evaluate true or false whether or not the message matched "I am crying" or something close. If it was true the count would increment, but given how many messages were sent it would be economically feasible in that large of a server
     </p>
-    <p>
-        Originally, to account for more variations of the message, GPT API was integrated, but this version of the bot wasn't feasible to implement as hundreds of messages are sent in the server 
-        every day, and making a call to GPT quickly got expensive.
-    </p>
+    
+       
+
 </body>
+
+<footer>
+    Designed and developed by Vamsi Mananva 886292077
+</footer>
 </html>

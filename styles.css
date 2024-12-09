@@ -1,130 +1,168 @@
-/* General styling */
 body {
-  background-color: #1a1a2e; /* Dark purple background */
-  color: #e0e0e0; /* Light text color for contrast */
-  font-family: 'Roboto', Arial, sans-serif; /* Clean, modern font */
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: radial-gradient(circle at bottom, #0a0a23, #1a1a2e);
+  color: #e0e0e0;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Navigation Bar */
+.centered-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 nav {
-  background-color: #12122b; /* Darker purple for navbar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0f0f29;
   padding: 10px 20px;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
-  color: #a29bfe; /* Purple accent color for links */
+  color: #a29bfe;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1em;
 }
 
 nav a:hover {
-  text-decoration: underline; /* Underline effect on hover */
+  color: #c4b5fd;
 }
 
-/* Page Content Centering */
-h1, p {
-  text-align: center; /* Center text for headings and paragraphs */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
 }
 
-body > * {
-  max-width: 800px; /* Limit content width for better readability */
-  margin: 0 auto; /* Center content horizontally */
-  padding: 0 20px; /* Add padding for mobile responsiveness */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
-/* Images */
-img {
-  display: block;
-  margin: 20px auto; /* Center images */
-  max-width: 100%; /* Ensure images are responsive */
-  height: auto;
+p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #a29bfe;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-/* Contact Form */
 form {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #252540; /* Slightly lighter purple for form background */
+  border: 2px solid #a29bfe;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ffffff;
 }
 
 form label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: bold;
-  color: #bfbfdf; /* Light purple for labels */
+  color: #bfbfdf;
 }
 
 form input, form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #3e3e5e; /* Border matching theme */
+  border: 1px solid #444466;
   border-radius: 5px;
-  background-color: #1a1a2e; /* Dark background for inputs */
-  color: #e0e0e0; /* Light text */
+  background-color: #1a1a2e;
+  color: #e0e0e0;
   font-size: 1em;
 }
 
-form input::placeholder, form textarea::placeholder {
-  color: #7575a3; /* Muted purple for placeholders */
-}
-
-form input:focus, form textarea:focus {
-  border-color: #a29bfe; /* Highlight border on focus */
-  outline: none;
-}
-
 form textarea {
-  resize: vertical; /* Allow resizing vertically */
-  height: 100px; /* Set initial height for textarea */
+  resize: vertical;
+  height: 120px;
 }
 
 form button {
-  background-color: #a29bfe; /* Purple accent for button */
-  color: #1a1a2e; /* Dark text for contrast */
+  background-color: #a29bfe;
+  color: #1a1a2e;
   border: none;
   border-radius: 5px;
   padding: 12px 20px;
   font-size: 1em;
   cursor: pointer;
-  display: block;
-  margin: 0 auto; /* Center button */
+  width: 100%;
   font-weight: bold;
-  text-transform: uppercase; /* Make button text all caps */
+  text-transform: uppercase;
   transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #c4b5fd; /* Lighter purple on hover */
+  background-color: #c4b5fd;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap; /* Allow wrapping of navbar links */
-    gap: 10px;
-  }
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-  h1 {
-    font-size: 2em; /* Adjust heading size */
-  }
+footer {
+  background-color: #0f0f29;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px 10px;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  border: none;
+  margin: 0;
+}
 
-  form {
-    padding: 15px; /* Reduce padding for smaller screens */
-  }
+footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
 
-  form button {
-    font-size: 0.9em; /* Adjust button size */
-  }
+footer a {
+  color: #a29bfe;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #c4b5fd;
+  text-decoration: underline;
+}
+
+footer div {
+  border: none;
+  background: none;
+  box-shadow: none;
 }
